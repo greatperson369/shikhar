@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shikhar Language</title>
+
+<!-- Fonts (needs internet). You can delete this line; the page still works with default fonts. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Serif+Devanagari:wght@700&display=swap">
+
+<style>
+/* ============================================================
+   1. COLORS AND FONTS: change these values to restyle the page
+   ============================================================ */
+:root {
+  --bg: #f2f5f6;        /* page background */
+  --text: #0f1c21;      /* main text */
+  --muted: #4a5e66;     /* lighter text */
+  --box: #e4ebed;       /* background of code box and cards */
+  --line: #c3cfd3;      /* thin borders */
+  --accent: #0b7a85;    /* links and highlights */
+}
+
+/* Dark mode: used automatically if the visitor's device is set to dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a1317;
+    --text: #e8f1f3;
+    --muted: #8fa6ae;
+    --box: #111f25;
+    --line: #22363e;
+    --accent: #5ccbd4;
+  }
+}
+
+/* ============================================================
+   2. BASIC PAGE STYLE (you can leave this alone)
+   ============================================================ */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.container {            /* keeps content in a centered column */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--accent); }
+
+/* Top navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+nav .logo { font-weight: bold; font-size: 20px; }
+nav a { margin-left: 16px; text-decoration: none; }
+
+/* Big title at the top */
+.hero { padding: 60px 0 40px; }
+.hero .nepali {
+  font-family: "Noto Serif Devanagari", serif;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0;
+}
+.hero h1 { font-size: 32px; margin: 10px 0; }
+.hero p  { color: var(--muted); }
+
+/* Each section */
+section { padding: 40px 0; }
+h2 { font-size: 26px; margin: 0 0 12px; }
+
+/* Code box */
+pre {
+  background: var(--box);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;     /* scroll sideways if a line is too long */
+  font-family: "JetBrains Mono", Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Feature cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--box);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p  { margin: 0; color: var(--muted); font-size: 16px; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 0 40px;
+  color: var(--muted);
+  font-size: 15px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       Change the name, or add/remove links. The href="#about"
+       part must match the id of a section below.
+       ============================================================ -->
+  <nav>
+    <span class="logo">Shikhar</span>
+    <span>
+      <a href="#about">About</a>
+      <a href="#code">Code</a>
+      <a href="#features">Features</a>
+    </span>
+  </nav>
+
+  <!-- ============================================================
+       HERO (the top of the page)
+       EDIT: the tagline in <h1> and the short line in <p>
+       ============================================================ -->
+  <header class="hero">
+    <p class="nepali">शिखर</p>
+    <h1>WRITE YOUR TAGLINE HERE</h1>
+    <p>WRITE A ONE-LINE SUMMARY OF SHIKHAR HERE.</p>
+  </header>
+
+  <!-- ============================================================
+       ABOUT
+       EDIT: replace the text inside each <p>...</p> with your own
+       description. Copy a whole <p>...</p> line to add more paragraphs.
+       ============================================================ -->
+  <section id="about">
+    <h2>About Shikhar</h2>
+    <p>WRITE YOUR DESCRIPTION HERE. Why did you create Shikhar? What problem does it solve?</p>
+    <p>SECOND PARAGRAPH (optional). You can delete this whole line.</p>
+  </section>
+
+  <!-- ============================================================
+       CODE EXAMPLE
+       EDIT: delete the line between <pre><code> and </code></pre>
+       and paste your own code. Spaces and new lines are kept exactly.
+       Note: write < as &lt; and > as &gt; if your code uses them.
+       ============================================================ -->
+  <section id="code">
+    <h2>Code example</h2>
+    <pre><code>PASTE YOUR SHIKHAR CODE HERE</code></pre>
+    <p>OPTIONAL: explain what this code does.</p>
+  </section>
+
+  <!-- ============================================================
+       FEATURES
+       EDIT: each <div class="card">...</div> is one box.
+       Copy a whole card to add more, or delete one to remove it.
+       ============================================================ -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>FEATURE ONE</h3>
+        <p>Describe it in one sentence.</p>
+      </div>
+
+      <div class="card">
+        <h3>FEATURE TWO</h3>
+        <p>Describe it in one sentence.</p>
+      </div>
+
+      <div class="card">
+        <h3>FEATURE THREE</h3>
+        <p>Describe it in one sentence.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       EDIT: add your name and links (GitHub, email, etc.)
+       Example link: <a href="https://github.com/yourname">GitHub</a>
+       ============================================================ -->
+  <footer>
+    Shikhar Language · Made by YOUR NAME · <a href="#">GitHub</a>
+  </footer>
+
+</div>
+</body>
+</html>
